@@ -4,9 +4,9 @@
 
 **App view** ![Home](./public/home.png)
 
-**URL**: https://github.com/Abhi76076/FileGaurd
+**URL**: https://github.com/Abhi76076/file_editor
 
-**Live preview**: https://abhi76076.github.io/FileGaurd/#/
+**Live preview**: https://abhi76076.github.io/file_editor/#/
 
 ## How can I edit this code?
 
@@ -14,7 +14,7 @@ There are several ways of editing your application.
 
 **Use FilesGaurd**
 
-Simply visit the [[PDF Project](https://github.com/Abhi76076/FileGaurd)]and start prompting.
+Simply visit the [[PDF Project](https://github.com/Abhi76076/file_editor)]and start prompting.
 
 Changes made via FilesGaurd will be committed automatically to this repo.
 
@@ -22,13 +22,13 @@ Changes made via FilesGaurd will be committed automatically to this repo.
 
 If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in FilesGaurd.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/Abhi76076/FileGaurd)
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/Abhi76076/file_editor)
 
 Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone https://github.com/Abhi76076/FileGaurd
+git clone https://github.com/Abhi76076/file_editor
 
 # Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
@@ -66,7 +66,7 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [PDF Merging](https://github.com/Abhi76076/FileGaurd) and click on Share -> Publish.
+Simply open [PDF Merging](https://github.com/Abhi76076/file_editor) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my project?
 
@@ -74,4 +74,4 @@ Yes, you can!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.FilesGaurd.dev/features/custom-domain#custom-domain)
+Read more here: [Setting up a custom domain](https://docs.file_editor.dev/features/custom-domain#custom-domain)
