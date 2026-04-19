@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Lock, Unlock, Shield, Zap, Eye, FileText, ArrowRight, CheckCircle, Layers } from 'lucide-react';
+import { Lock, Unlock, Shield, Zap, Eye, FileText, ArrowRight, CheckCircle, Layers, Maximize } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 
@@ -24,6 +24,11 @@ const features = [
     icon: Layers,
     title: 'Merge PDFs',
     description: 'Combine multiple PDF files into a single document effortlessly.',
+  },
+  {
+    icon: Maximize,
+    title: 'Resize Images',
+    description: 'Scale images to custom pixel dimensions or relative percentages.',
   },
 ];
 
@@ -104,6 +109,12 @@ const Index = () => {
                 <Button size="lg" variant="outline" className="gap-2 px-8 h-14 text-lg">
                   <Layers className="w-5 h-5" />
                   Merge PDFs
+                </Button>
+              </Link>
+              <Link to="/resize">
+                <Button size="lg" variant="outline" className="gap-2 px-8 h-14 text-lg">
+                  <Maximize className="w-5 h-5" />
+                  Resize Images
                 </Button>
               </Link>
             </motion.div>
@@ -290,6 +301,12 @@ const Index = () => {
                 <Button size="lg" variant="outline" className="gap-2">
                   <Layers className="w-5 h-5" />
                   Merge PDFs
+                </Button>
+              </Link>
+              <Link to="/resize">
+                <Button size="lg" variant="outline" className="gap-2">
+                  <Maximize className="w-5 h-5" />
+                  Resize Images
                 </Button>
               </Link>
             </div>

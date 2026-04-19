@@ -50,6 +50,7 @@ export const encryptPDF = async (
 
   // Use QPDF for fast native encryption (no page rendering needed)
   return new Promise((resolve, reject) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const QPDF = (window as any).QPDF;
     
     if (!QPDF) {
@@ -58,7 +59,7 @@ export const encryptPDF = async (
     }
 
     // Set the path for QPDF worker files
-    QPDF.path = '/qpdf/';
+    QPDF.path = '/qpdf/qpdf-worker.js';
 
     QPDF.encrypt({
       logger: () => {}, // Suppress debug output
@@ -194,7 +195,7 @@ const compressPDFWithImages = async (arrayBuffer: ArrayBuffer, quality: number):
     canvas.width = renderViewport.width;
     canvas.height = renderViewport.height;
 
-    await page.render({ canvasContext: context, viewport: renderViewport }).promise;
+    await page.render({ canvasContext: context, viewport: renderViewport, canvas }).promise;
 
     // Use blob instead of dataURL for smaller size
     const blob = await new Promise<Blob>((resolve, reject) => {
@@ -243,7 +244,7 @@ export const convertPDFToImages = async (file: File, format: 'png' | 'jpeg'): Pr
     canvas.width = viewport.width;
     canvas.height = viewport.height;
 
-    await page.render({ canvasContext: context, viewport }).promise;
+    await page.render({ canvasContext: context, viewport, canvas }).promise;
 
     const blob = await new Promise<Blob>((resolve, reject) => {
       canvas.toBlob(

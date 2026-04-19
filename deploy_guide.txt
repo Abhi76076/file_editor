@@ -1,0 +1,52 @@
+=========================================
+ HOW TO DEPLOY YOUR WEBSITE ONLINE
+=========================================
+
+This application is built using React and Vite. It runs entirely in the user's browser, meaning there is no separate backend server required to host it. You only need to host the "static files".
+
+Follow these steps to deploy your website to any online portal like Hostinger, Netlify, Vercel, or GitHub Pages:
+
+-----------------------------------------
+ STEP 1: Build the Project
+-----------------------------------------
+Before deploying, you must compile your project into production-ready static files.
+
+1. Open your terminal in the main project directory.
+2. Run the following command:
+   npm run build
+
+3. Wait for the command to finish. It will create a new folder named `dist` (which stands for distribution) in your project directory. This `dist` folder contains everything your live website needs (HTML, JavaScript, and CSS).
+
+-----------------------------------------
+ STEP 2: Deploy to a Hosting Provider
+-----------------------------------------
+
+OPTION A: Hostinger (or any cPanel / Standard Web Host)
+1. Log in to your Hostinger account and go to your File Manager.
+2. Navigate to your domain's `public_html` directory.
+3. Open the `dist` folder you generated in Step 1 on your computer.
+4. Upload all the *contents* of the `dist` folder directly into the `public_html` directory on Hostinger.
+5. Your website is now live!
+
+OPTION B: Netlify (Fastest & Free)
+1. Go to https://www.netlify.com/ and log in.
+2. Go to the "Sites" tab and drag-and-drop your `dist` folder into the upload box at the bottom.
+3. Netlify will instantly create a live URL for your site. You can also link your GitHub repository to Netlify so it deploys automatically every time you push code.
+
+OPTION C: Vercel (Also Free & Automated)
+1. Go to https://vercel.com/ and log in with GitHub.
+2. Click "Add New..." -> "Project" and import your GitHub repository.
+3. Vercel will automatically detect that this is a Vite project and run `npm run build` for you.
+4. Click "Deploy".
+
+OPTION D: GitHub Pages
+1. In your `package.json`, there is already a `predeploy` and `deploy` script.
+2. Make sure your `vite.config.ts` has the correct `base` path (e.g., `base: '/file_editor/'`).
+3. Run the command: `npm run deploy` anywhere in your terminal.
+4. GitHub Pages will host your site automatically on your `github.io` domain.
+
+-----------------------------------------
+ TROUBLESHOOTING
+-----------------------------------------
+- Blank Screen After Deploy: Make sure the `base` property in `vite.config.ts` matches your domain strictly. If deploying to the root of a domain (e.g., mywebsite.com), ensure `base: '/'`. If deploying to a subfolder (e.g., github.io/my-app/), ensure `base: '/my-app/'`.
+- Missing Assets/Icons: Always deploy the entire contents of the `dist` folder, do not leave folders like `assets` or `qpdf` behind.
