@@ -1,4 +1,6 @@
-# Welcome to My FileEditor project
+# FileEditor - PDF Tools Application
+
+A comprehensive tool to edit, merge, split, and manipulate PDF files directly in your browser.
 
 ## Project info
 
@@ -8,21 +10,15 @@
 
 **Live preview**: https://abhi76076.github.io/file_editor/#/
 
-## How can I edit this code?
+## How to run locally
 
-There are several ways of editing your application.
-
-**Use FileEditor**
-
-Simply visit the [[PDF Project](https://github.com/Abhi76076/file_editor)]and start prompting.
-
-Changes made via FileEditor will be committed automatically to this repo.
+There are several ways of editing and running your application locally.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in FileEditor.
+If you want to work locally using your own IDE, you can clone this repo. 
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/Abhi76076/file_editor)
+The only requirement is having Node.js & npm installed.
 
 Follow these steps:
 
